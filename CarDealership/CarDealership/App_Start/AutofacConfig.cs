@@ -43,6 +43,7 @@
 
             //App config injection
             builder.RegisterType<AppConfig>().As<IAppConfig>();
+            builder.RegisterType<ConnectionStringFactory>().As<IConnectionStringFactory>();
 
             //Log4Net injection
             builder.RegisterModule(new LogInjectionModule());

@@ -1,5 +1,6 @@
 ﻿namespace CarDealership.Models.ViewModel
 {
+    using Newtonsoft.Json;
     using System.Collections.Generic;
 
     /// <summary>
@@ -8,6 +9,6 @@
     /// <seealso cref="CarDealership.Models.Base.CarOptionsBase" />
     public class CarViewModel
     {
-        public IEnumerable<Car> carItems { get; set; }
+        public IEnumerable<Car> data { get; set; }
     }
 }

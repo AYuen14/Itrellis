@@ -67,7 +67,7 @@
         /// </returns>
         public async Task<CarViewModel> GetCarInformationAsync(Car carOptions)
         {
-            CarViewModel carList = null;
+            CarViewModel carList = new CarViewModel();
 
             try
             {
@@ -76,12 +76,12 @@
                     var parameters = new DynamicParameters();
                     parameters.Add("@Color", carOptions.Color);
                     parameters.Add("@IsAutomatic", carOptions.IsAutomatic);
-                    parameters.Add("@IsSunRoof", carOptions.IsSunRoof);
+                    parameters.Add("@HasSunroof", carOptions.HasSunRoof);
                     parameters.Add("@IsFourWheelDrive", carOptions.IsFourWheelDrive);
-                    parameters.Add("@IsLowMiles", carOptions.IsLowMiles);
-                    parameters.Add("@IsPowerWindows", carOptions.IsPowerWindows);
-                    parameters.Add("@IsNavigation", carOptions.IsNavigation);
-                    parameters.Add("@IsHeatedSeats", carOptions.IsHeatedSeats);
+                    parameters.Add("@HasLowMiles", carOptions.HasLowMiles);
+                    parameters.Add("@HasPowerWindows", carOptions.HasPowerWindows);
+                    parameters.Add("@HasNavigation", carOptions.HasNavigation);
+                    parameters.Add("@HasHeatedSeats", carOptions.HasHeatedSeats);
 
 
                     var result = await connection.QueryAsync<Car>
@@ -89,7 +89,7 @@
                         parameters,
                         commandType: CommandType.StoredProcedure);
 
-                    carList.carItems = result.ToList();
+                    carList.data = result.ToList();
                 }
             }
             catch(Exception ex)

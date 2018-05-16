@@ -2,6 +2,7 @@
 using CarDealership.Models.ViewModel;
 using CarDealership.Services.Interface;
 using log4net;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,6 @@ namespace CarDealership.Controllers
             this._carDealershipService = carDealershipService;
         }
 
-        // GET: Home
         public async Task<ActionResult> Index(Car carOptions)
         {
             CarViewModel carViewModel = null;
@@ -48,7 +48,25 @@ namespace CarDealership.Controllers
             {
                 carViewModel = Task.Run(() => this._carDealershipService.GetCarInformationAsync(carOptions)).Result;
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                this._logger.Fatal($"Failed in Home Index \n Exception : {ex}");
+                throw;
+            }
+
+            return this.View(carViewModel);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> PostData(Car carOptions)
+        {
+            CarViewModel carViewModel = null;
+
+            try
+            {
+                carViewModel = Task.Run(() => this._carDealershipService.GetCarInformationAsync(carOptions)).Result;
+            }
+            catch (Exception ex)
             {
                 this._logger.Fatal($"Failed in Home Index \n Exception : {ex}");
                 throw;
