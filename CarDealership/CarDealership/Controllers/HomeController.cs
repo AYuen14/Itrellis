@@ -1,17 +1,19 @@
-﻿using CarDealership.Models;
-using CarDealership.Models.ViewModel;
-using CarDealership.Services.Interface;
-using log4net;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-
-namespace CarDealership.Controllers
+﻿namespace CarDealership.Controllers
 {
+    using System;
+    using System.Threading.Tasks;
+    using System.Web.Mvc;
+
+    using log4net;
+
+    using CarDealership.Models;
+    using CarDealership.Models.ViewModel;
+    using CarDealership.Services.Interface;
+
+    /// <summary>
+    /// Controller class for home
+    /// </summary>
+    /// <seealso cref="System.Web.Mvc.Controller" />
     public class HomeController : Controller
     {
         /// <summary>
@@ -24,6 +26,16 @@ namespace CarDealership.Controllers
         /// </summary>
         private readonly ICarDealershipService _carDealershipService;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="HomeController"/> class.
+        /// </summary>
+        /// <param name="logger">The logger.</param>
+        /// <param name="carDealershipService">The car dealership service.</param>
+        /// <exception cref="System.ArgumentNullException">
+        /// logger
+        /// or
+        /// carDealershipService
+        /// </exception>
         public HomeController(ILog logger, ICarDealershipService carDealershipService)
         {
             if (logger == null)
@@ -40,6 +52,11 @@ namespace CarDealership.Controllers
             this._carDealershipService = carDealershipService;
         }
 
+        /// <summary>
+        /// Indexes the specified car options.
+        /// </summary>
+        /// <param name="carOptions">The car options.</param>
+        /// <returns></returns>
         public async Task<ActionResult> Index(Car carOptions)
         {
             CarViewModel carViewModel = null;
@@ -57,6 +74,11 @@ namespace CarDealership.Controllers
             return this.View(carViewModel);
         }
 
+        /// <summary>
+        /// Posts the data.
+        /// </summary>
+        /// <param name="carOptions">The car options.</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult> PostData(Car carOptions)
         {

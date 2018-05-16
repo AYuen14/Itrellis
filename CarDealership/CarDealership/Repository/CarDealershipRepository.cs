@@ -1,9 +1,9 @@
 ﻿namespace CarDealership.Repository
 {
     using System;
-    using System.Collections.Generic;
     using System.Data;
     using System.Data.SqlClient;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using Dapper;
@@ -14,7 +14,6 @@
     using CarDealership.App_Start.Utility.Interface;
     using CarDealership.Repository.Interface;
     using Models.Constants;
-    using System.Linq;
 
     /// <summary>
     /// Car dealership repository
