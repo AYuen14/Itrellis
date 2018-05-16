@@ -1,0 +1,14 @@
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\CarDealership.Tests.deps.json
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\CarDealership.Tests.runtimeconfig.json
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\CarDealership.Tests.runtimeconfig.dev.json
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\CarDealership.Tests.dll
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\obj\Debug\netcoreapp2.0\CarDealership.Tests.csprojResolveAssemblyReference.cache
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\obj\Debug\netcoreapp2.0\CarDealership.Tests.csproj.CoreCompileInputs.cache
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\obj\Debug\netcoreapp2.0\CarDealership.Tests.AssemblyInfoInputs.cache
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\obj\Debug\netcoreapp2.0\CarDealership.Tests.AssemblyInfo.cs
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\bin\Debug\netcoreapp2.0\CarDealership.Tests.pdb
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\obj\Debug\netcoreapp2.0\CarDealership.Tests.dll
+C:\AdamSandBox\Sandbox\CarDealership\CarDealership.Tests\obj\Debug\netcoreapp2.0\CarDealership.Tests.pdb
