@@ -61,70 +61,19 @@
                     <div class="col-sm-4">
                         <div class="cb-filter-input">
                             <label>Color:</label>
-                            <span>
-                                <input id="includeActive" type="checkbox" checked="checked" class="cb-filter-selection include-active">
-                                <label for="includeActive">Red</label>
-                            </span>
-                            <span>
-                                <input id="includeActive" type="checkbox" checked="checked" class="cb-filter-selection include-active">
-                                <label for="includeActive">White</label>
-                            </span>
-                            <span>
-                                <input id="includeActive" type="checkbox" checked="checked" class="cb-filter-selection include-active">
-                                <label for="includeActive">Gray</label>
-                            </span>
-                            <span>
-                                <input id="includeActive" type="checkbox" checked="checked" class="cb-filter-selection include-active">
-                                <label for="includeActive">Silver</label>
-                            </span>
-                            <span>
-                                <input id="includeActive" type="checkbox" checked="checked" class="cb-filter-selection include-active">
-                                <label for="includeActive">Black</label>
-                            </span>
+                            <select class="ddl-filter-selection include-color">
+                                <option value="Red">Red</option>
+                                <option value="White">White</option>
+                                <option value="Gray">Gray</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Black">Black</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container container-tabs position-relative">
-        <div class="tab-content clearfix">
-            <div class="tab-pane active" role="tabpanel">
-                <table id="car-table" class="table table-bordered table-striped car-table">
-                    <thead class="table-primary">
-                        <tr>
-                            <th scope="col">Make</th>
-                            <th scope="col">Year</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Color</th>
-                            <th scope="col">IsAutomatic</th>
-                            <th scope="col">HasSunRoof</th>
-                            <th scope="col">IsFourWheelDrive</th>
-                            <th scope="col">HasLowMiles</th>
-                            <th scope="col">HasPowerWindows</th>
-                            <th scope="col">HasNavigation</th>
-                            <th scope="col">HasHeatedSeats</th>
-                        </tr>
-                    </thead>
-                    @foreach (var carinfo in Model.data)
-                    {
-                        <tr>
-                            <td>@carinfo.Make</td>
-                            <td>@carinfo.Year</td>
-                            <td>@carinfo.Price</td>
-                            <td>@carinfo.Color</td>
-                            <td>@carinfo.IsAutomatic</td>
-                            <td>@carinfo.HasSunRoof</td>
-                            <td>@carinfo.IsFourWheelDrive</td>
-                            <td>@carinfo.HasLowMiles</td>
-                            <td>@carinfo.HasPowerWindows</td>
-                            <td>@carinfo.HasNavigation</td>
-                            <td>@carinfo.HasHeatedSeats</td>
-                        </tr>
-                    }
-                </table>
-            </div>
-        </div>
-    </div>
+    @Html.Partial("_partialTable", Model)
 </div>
 

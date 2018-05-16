@@ -72,7 +72,7 @@ namespace CarDealership.Controllers
                 throw;
             }
 
-            return this.View(carViewModel);
+            return PartialView("_partialTable", carViewModel);
         }
     }
 }

@@ -3,7 +3,7 @@
 
     function fetchData() {
         var carOptions = {
-            "Color": "Black",
+            "Color": $(".include-color :selected").val(),
             "IsAutomatic": $(".include-automatic").is(":checked"),
             "HasSunRoof": $(".include-sunroof").is(":checked"),
             "IsFourWheelDrive": $(".include-fourwheeldrive").is(":checked"),
@@ -21,8 +21,8 @@
             });
 
         jqXhr.done(function (data) {
-            if (data && typeof callback === "function") {
-                data;
+            if (data) {
+                $(".container-tabs").html(data);
             }
         });
 
@@ -35,6 +35,7 @@
         var $contentWrapper = $(".cardealership-listing-container");
 
         $contentWrapper.on("click", ".cb-filter-selection", fetchData);
+        $contentWrapper.on("change", ".ddl-filter-selection", fetchData);
     }
 
 
