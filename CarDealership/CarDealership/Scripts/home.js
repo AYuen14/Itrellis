@@ -4,7 +4,6 @@
     function fetchData() {
         var carOptions = {
             "Color": $(".include-color :selected").val(),
-            "IsAutomatic": $(".include-automatic").is(":checked"),
             "HasSunRoof": $(".include-sunroof").is(":checked"),
             "IsFourWheelDrive": $(".include-fourwheeldrive").is(":checked"),
             "HasLowMiles": $(".include-lowmiles").is(":checked"),
