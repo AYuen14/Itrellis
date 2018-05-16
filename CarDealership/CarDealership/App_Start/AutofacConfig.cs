@@ -1,19 +1,27 @@
-﻿using Autofac;
-using Autofac.Integration.Mvc;
-using CarDealership.App_Start.AutofacModules;
-using CarDealership.App_Start.Utility;
-using CarDealership.App_Start.Utility.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Web;
-using System.Web.Mvc;
-
-namespace CarDealership.App_Start
+﻿namespace CarDealership.App_Start
 {
+    using System.Reflection;
+    using System.Web.Mvc;
+
+    using Autofac;
+    using Autofac.Integration.Mvc;
+
+    using CarDealership.App_Start.AutofacModules;
+    using CarDealership.App_Start.Utility;
+    using CarDealership.App_Start.Utility.Interface;
+    using CarDealership.Repository;
+    using CarDealership.Repository.Interface;
+    using CarDealership.Services;
+    using CarDealership.Services.Interface;
+
+    /// <summary>
+    /// Autofac configuration
+    /// </summary>
     public class AutofacConfig
     {
+        /// <summary>
+        /// Registers the autofac IOC.
+        /// </summary>
         public static void RegisterAutofac()
         {
             var builder = new ContainerBuilder();
@@ -39,9 +47,9 @@ namespace CarDealership.App_Start
             //Log4Net injection
             builder.RegisterModule(new LogInjectionModule());
 
-            //Navigation Categories
-            //builder.RegisterType<NavigationQueryFactory>().As<INavigationQueryFactory>();
-            //builder.RegisterType<NavigationService>().As<INavigationService>();
+            //Car dealership
+            builder.RegisterType<CarDealershipRepository>().As<ICarDealershipRepository>();
+            builder.RegisterType<CarDealershipService>().As<ICarDealershipService>();
         }
 
     }

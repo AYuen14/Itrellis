@@ -86,3 +86,5 @@ C:\AdamSandBox\Itrellis\CarDealership\CarDealership\bin\log4net.dll
 C:\AdamSandBox\Itrellis\CarDealership\CarDealership\bin\Autofac.xml
 C:\AdamSandBox\Itrellis\CarDealership\CarDealership\bin\Autofac.Integration.Mvc.xml
 C:\AdamSandBox\Itrellis\CarDealership\CarDealership\bin\log4net.xml
+C:\AdamSandBox\Itrellis\CarDealership\CarDealership\bin\Dapper.dll
+C:\AdamSandBox\Itrellis\CarDealership\CarDealership\bin\Dapper.xml

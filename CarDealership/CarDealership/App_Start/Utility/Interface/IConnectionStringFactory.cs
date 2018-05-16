@@ -3,7 +3,7 @@
     /// <summary>
     /// Interface IConnectionStringFactory
     /// </summary>
-    interface IConnectionStringFactory
+    public interface IConnectionStringFactory
     {
         /// <summary>
         /// Gets the live connection string.
