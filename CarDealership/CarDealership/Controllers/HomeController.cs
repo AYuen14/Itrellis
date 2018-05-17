@@ -53,7 +53,7 @@
         }
 
         /// <summary>
-        /// Indexes the specified car options.
+        /// Initial run to return all car options.
         /// </summary>
         /// <param name="carOptions">The car options.</param>
         /// <returns></returns>
@@ -75,7 +75,7 @@
         }
 
         /// <summary>
-        /// Posts the data.
+        /// Posts the data to return filter selected data.
         /// </summary>
         /// <param name="carOptions">The car options.</param>
         /// <returns></returns>

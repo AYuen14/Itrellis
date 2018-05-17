@@ -17,37 +17,7 @@
                     <tr>
                         <td>@carinfo.Make</td>
                         <td>@carinfo.Year</td>
-                        <td>
-                            @if (!string.IsNullOrWhiteSpace(carinfo.Color))
-                            {
-                                <div>Color: @carinfo.Color</div>
-                            }
-                            @if (carinfo.HasSunRoof == true)
-                            {
-                                <div>Sun roof</div>
-                            }
-                            @if (carinfo.IsFourWheelDrive == true)
-                            {
-                                <div>4 Wheel Drive</div>
-                            }
-                            @if (carinfo.HasLowMiles == true)
-                            {
-                                <div>Low Miles</div>
-                            }
-                            @if (carinfo.HasPowerWindows == true)
-                            {
-                                <div>Power Windows</div>
-                            }
-                            @if (carinfo.HasNavigation == true)
-                            {
-                                <div>Navigation</div>
-                            }
-                            @if (carinfo.HasHeatedSeats == true)
-                            {
-                                <div>Heated Seats</div>
-                            }
-
-                        </td>
+                        <td>@carinfo.PrintOptions()</td>
                     </tr>
                 }
             </table>

@@ -1,18 +1,22 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit.Framework;
-using Moq;
-using log4net;
-using CarDealership.Services;
-using CarDealership.Repository.Interface;
-using System.Threading.Tasks;
-using CarDealership.Models;
-using FluentAssertions;
-
-namespace CarDealership.Tests.Service
+﻿namespace CarDealership.Tests.Service
 {
+    using System;
+    using System.Threading.Tasks;
+
+    using FluentAssertions;
+    using log4net;
+    using Moq;
+    using NUnit.Framework;
+
+    using CarDealership.Models;
+    using CarDealership.Services;
+    using CarDealership.Repository.Interface;
+
+    /// <summary>
+    /// Unit test for car dealership
+    /// </summary>
     [TestFixture(Category = "Car Dealership Service")]
-    public class UnitTest1
+    public class CarDealershipServiceTest
     {
         [Test]
         public void Constructor_NullReferenceForICarDealershipRepository_ShouldThrowArgumentNullException()
